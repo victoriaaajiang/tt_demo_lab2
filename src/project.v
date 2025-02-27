@@ -45,7 +45,7 @@ endmodule
 //This function modifies the 2 to 1 multiplexer by comparing the input signal to each bit of the inputs. 
 module mux_two_one(a, b, select, o);
     input a;
-    input b
+    input b;
     input a_7;
     output o;
 
