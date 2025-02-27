@@ -46,7 +46,7 @@ endmodule
 module mux_two_one(a, b, select, o);
     input a;
     input b;
-    input a_7;
+    input select;
     output o;
 
     assign o = select ? b : a;
