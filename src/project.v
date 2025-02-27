@@ -38,14 +38,16 @@ module tt_um_third (
     mux_two_one eighth(uo_out[3], uio_in[7], ui_in[1], uo_out[7]);
 
     // List all unused inputs to prevent warnings
-    wire _unused = &{ena, clk, rst_n, 1'b0, uio_out, uio_oe};
+    wire _unused = &{ena, clk, rst_n, 1'b0};
 
 endmodule
 
 //This function modifies the 2 to 1 multiplexer by comparing the input signal to each bit of the inputs. 
-module mux_two_one(a, b, a_7, o);
-    input a, b, a_7;
+module mux_two_one(a, b, select, o);
+    input a;
+    input b
+    input a_7;
     output o;
 
-    assign o = a_7 ? b : a;
+    assign o = select ? b : a;
 endmodule
