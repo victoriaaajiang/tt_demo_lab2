@@ -47,5 +47,5 @@ module mux_two_one(a, b, a_7, o);
     input a, b, a_7;
     output o;
 
-    assign o = a_7 ? b : a
+    assign o = a_7 ? b : a;
 endmodule
